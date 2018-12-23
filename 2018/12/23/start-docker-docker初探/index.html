@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="SnowEnv">
 <meta property="og:description" content="Docker简介Docker是一个平台，在这个平台上，开发人员和系统管理员可以使用容器的来进行应用的开发、部署以及运行。这种使用Linux容器进行应用部署 的方式称为容器化。Docker出现之前，开发流水线通常依赖于管理软件活动的不同技术组成，如虚拟机、配置管理工具、不同的包关系系统等。所有的这些工具需要特定的工程师进行维护。Docker改变了这种局面，所有的东西通过一个共同的流水线转变成可以在任">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/12/23/start-docker-docker初探/start-docker-docker初探/docker.png">
-<meta property="og:updated_time" content="2018-12-23T15:31:49.300Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/23/start-docker-docker初探/docker.png">
+<meta property="og:updated_time" content="2018-12-23T15:39:18.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="start-docker--docker初探">
 <meta name="twitter:description" content="Docker简介Docker是一个平台，在这个平台上，开发人员和系统管理员可以使用容器的来进行应用的开发、部署以及运行。这种使用Linux容器进行应用部署 的方式称为容器化。Docker出现之前，开发流水线通常依赖于管理软件活动的不同技术组成，如虚拟机、配置管理工具、不同的包关系系统等。所有的这些工具需要特定的工程师进行维护。Docker改变了这种局面，所有的东西通过一个共同的流水线转变成可以在任">
-<meta name="twitter:image" content="http://yoursite.com/2018/12/23/start-docker-docker初探/start-docker-docker初探/docker.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/23/start-docker-docker初探/docker.png">
 
 
 
@@ -384,7 +384,7 @@
 </ul>
 <p>上述的这些概念或者优点，在随后的文章中都会一一解释，接下来我们先看看<code>Docker</code>中的以下基本概念。</p>
 <h3 id="容器VS虚拟机"><a href="#容器VS虚拟机" class="headerlink" title="容器VS虚拟机"></a>容器VS虚拟机</h3><p>容器技术在某种程度上与虚拟化技术有点相似，不少人对于这两者的区别不是很清楚。因此，在这里对两者做一些简单的对比介绍，使读者能明确这两种技术上的区别：</p>
-<p><img src="./start-docker-docker初探/docker.png" alt="dockervsvirtual"></p>
+<p><img src="docker.png" alt="dockervsvirtual"></p>
 <p>从上图中可以大概看出，虚拟机运行于<code>Hypervisor</code>之上，每个虚拟机中单独运行着一个<code>Guest OS</code>。容器技术中，没有<code>Hypervisor</code>这一层，则容器和主机间共享硬件资源及操作系统。容器技术中，系统环境的隔离来自于<code>Namespaces</code>，环境资源的隔离来自于<code>Cgroups</code>，这些在后面文章会有涉及。</p>
 <h2 id="Docker一些基本概念"><a href="#Docker一些基本概念" class="headerlink" title="Docker一些基本概念"></a>Docker一些基本概念</h2><h3 id="镜像、容器"><a href="#镜像、容器" class="headerlink" title="镜像、容器"></a>镜像、容器</h3><p>镜像(<code>image</code>)是文件系统层和一些元数据的集合。我们可以将镜像和容器类比于编程语言中的类和实例的关系，虽然这种类比并不是十分准确，但是这样有助于初步理解这两者之间的关系。</p>
 <p>镜像（<code>image</code>）提供了容器运行的初始环境，类似于一个模板，实际运行的容器是以此模板派生出的实例，每个实例的属性不尽相同。可想而知，实例中对于属性的操作，不会对类本身产生变化，这也符合<code>Docker</code>的写时复制（<code>copy-on-write</code>）的机制。即容器的文件变更不会对基础镜像产生影响。</p>
