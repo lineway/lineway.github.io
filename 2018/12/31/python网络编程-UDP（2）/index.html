@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="docker,">
+  <meta name="keywords" content="python,">
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="Docker简介Docker是一个平台，在这个平台上，开发人员和系统管理员可以使用容器的来进行应用的开发、部署以及运行。这种使用Linux容器进行应用部署 的方式称为容器化。Docker出现之前，开发流水线通常依赖于管理软件活动的不同技术组成，如虚拟机、配置管理工具、不同的包关系系统等。所有的这些工具需要特定的工程师进行维护。Docker改变了这种局面，所有的东西通过一个共同的流水线转变成可以在任">
-<meta name="keywords" content="docker">
+<meta name="description" content="混杂客户端和垃圾回复上一篇 UDP简介介绍了一个简单的 UDP服务端和客户端实现，这是一个简单的实现，这种方式实现的客户端程序是十分危险的。尽管recvfrom()返回了传入的数据报地址，但是代码没有检查该数据报的源地址，即客户端没有检查该数据报是否由客户端发出。 假设现在有一个攻击者，在服务端返回数据报之前将伪造的数据报发送给该客户端，那么客户端就会认为伪造的数据报来源于真是的服务端。像这样不考">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="start-docker--docker初探">
-<meta property="og:url" content="http://yoursite.com/2018/12/23/start-docker-docker初探/index.html">
+<meta property="og:title" content="python网络编程----UDP（2）">
+<meta property="og:url" content="http://yoursite.com/2018/12/31/python网络编程-UDP（2）/index.html">
 <meta property="og:site_name" content="SnowEnv">
-<meta property="og:description" content="Docker简介Docker是一个平台，在这个平台上，开发人员和系统管理员可以使用容器的来进行应用的开发、部署以及运行。这种使用Linux容器进行应用部署 的方式称为容器化。Docker出现之前，开发流水线通常依赖于管理软件活动的不同技术组成，如虚拟机、配置管理工具、不同的包关系系统等。所有的这些工具需要特定的工程师进行维护。Docker改变了这种局面，所有的东西通过一个共同的流水线转变成可以在任">
+<meta property="og:description" content="混杂客户端和垃圾回复上一篇 UDP简介介绍了一个简单的 UDP服务端和客户端实现，这是一个简单的实现，这种方式实现的客户端程序是十分危险的。尽管recvfrom()返回了传入的数据报地址，但是代码没有检查该数据报的源地址，即客户端没有检查该数据报是否由客户端发出。 假设现在有一个攻击者，在服务端返回数据报之前将伪造的数据报发送给该客户端，那么客户端就会认为伪造的数据报来源于真是的服务端。像这样不考">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/12/23/start-docker-docker初探/docker.png">
-<meta property="og:updated_time" content="2018-12-23T15:39:18.782Z">
+<meta property="og:updated_time" content="2019-01-01T15:07:36.164Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="start-docker--docker初探">
-<meta name="twitter:description" content="Docker简介Docker是一个平台，在这个平台上，开发人员和系统管理员可以使用容器的来进行应用的开发、部署以及运行。这种使用Linux容器进行应用部署 的方式称为容器化。Docker出现之前，开发流水线通常依赖于管理软件活动的不同技术组成，如虚拟机、配置管理工具、不同的包关系系统等。所有的这些工具需要特定的工程师进行维护。Docker改变了这种局面，所有的东西通过一个共同的流水线转变成可以在任">
-<meta name="twitter:image" content="http://yoursite.com/2018/12/23/start-docker-docker初探/docker.png">
+<meta name="twitter:title" content="python网络编程----UDP（2）">
+<meta name="twitter:description" content="混杂客户端和垃圾回复上一篇 UDP简介介绍了一个简单的 UDP服务端和客户端实现，这是一个简单的实现，这种方式实现的客户端程序是十分危险的。尽管recvfrom()返回了传入的数据报地址，但是代码没有检查该数据报的源地址，即客户端没有检查该数据报是否由客户端发出。 假设现在有一个攻击者，在服务端返回数据报之前将伪造的数据报发送给该客户端，那么客户端就会认为伪造的数据报来源于真是的服务端。像这样不考">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/23/start-docker-docker初探/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/31/python网络编程-UDP（2）/">
 
 
 
 
 
-  <title>start-docker--docker初探 | SnowEnv</title>
+  <title>python网络编程----UDP（2） | SnowEnv</title>
   
 
 
@@ -275,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/23/start-docker-docker初探/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/31/python网络编程-UDP（2）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yiming.zhang">
@@ -292,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">start-docker--docker初探</h1>
+          <h1 class="post-title" itemprop="name headline">python网络编程----UDP（2）</h1>
         
 
         <div class="post-meta">
@@ -304,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-23T10:42:24+08:00">
-                2018-12-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-31T17:25:21+08:00">
+                2018-12-31
               </time>
             
 
@@ -327,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker-kubernetes/" itemprop="url" rel="index">
-                    <span itemprop="name">docker&kubernetes</span>
+                  <a href="/categories/编程学习/" itemprop="url" rel="index">
+                    <span itemprop="name">编程学习</span>
                   </a>
                 </span>
 
@@ -345,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/23/start-docker-docker初探/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/12/23/start-docker-docker初探/" itemprop="commentCount"></span>
+                <a href="/2018/12/31/python网络编程-UDP（2）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/12/31/python网络编程-UDP（2）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -374,28 +372,36 @@
       
 
       
-        <h2 id="Docker简介"><a href="#Docker简介" class="headerlink" title="Docker简介"></a>Docker简介</h2><p><code>Docker</code>是一个平台，在这个平台上，开发人员和系统管理员可以使用<strong>容器</strong>的来进行应用的开发、部署以及运行。这种使用<code>Linux</code>容器进行应用部署 的方式称为<strong>容器化</strong>。<code>Docker</code>出现之前，开发流水线通常依赖于管理软件活动的不同技术组成，如虚拟机、配置管理工具、不同的包关系系统等。所有的这些工具需要特定的工程师进行维护。<code>Docker</code>改变了这种局面，所有的东西通过一个共同的流水线转变成可以在任何目标平台上使用的单一配置。</p>
-<p>容器技术流行的原因有以下几个方面：</p>
+        <h2 id="混杂客户端和垃圾回复"><a href="#混杂客户端和垃圾回复" class="headerlink" title="混杂客户端和垃圾回复"></a>混杂客户端和垃圾回复</h2><p>上一篇 <a href="https://lineway.github.io/2018/12/31/python%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-UDP/" target="_blank" rel="noopener">UDP简介</a>介绍了一个简单的 UDP服务端和客户端实现，这是一个简单的实现，这种方式实现的客户端程序是十分危险的。尽管<code>recvfrom()</code>返回了传入的数据报地址，但是代码没有检查该数据报的源地址，即客户端没有检查该数据报是否由客户端发出。</p>
+<p>假设现在有一个攻击者，在服务端返回数据报之前将伪造的数据报发送给该客户端，那么客户端就会认为伪造的数据报来源于真是的服务端。像这样不考虑地址是否正确，接收并处理所有收到的数据包的网络监听客户端在技术上叫做<code>混杂(promiscuous)客户端</code>。这种客户端有其适用的场景，但是在当前情况下，这是一个问题。</p>
+<p>一般而言，使用好的加密方法能保证程序与正确的服务器进行通信。但是也可以通过两个简单方案解决这类问题：</p>
 <ul>
-<li>灵活性</li>
-<li>轻量级</li>
-<li>可扩展</li>
-<li>便携性</li>
+<li>设计或使用在请求中包含唯一标识符或请求ID的协议；</li>
+<li>检查响应数据包的地址与请求数据包的地址是否相同；</li>
 </ul>
-<p>上述的这些概念或者优点，在随后的文章中都会一一解释，接下来我们先看看<code>Docker</code>中的以下基本概念。</p>
-<h3 id="容器VS虚拟机"><a href="#容器VS虚拟机" class="headerlink" title="容器VS虚拟机"></a>容器VS虚拟机</h3><p>容器技术在某种程度上与虚拟化技术有点相似，不少人对于这两者的区别不是很清楚。因此，在这里对两者做一些简单的对比介绍，使读者能明确这两种技术上的区别：</p>
-<p><img src="docker.png" alt="dockervsvirtual"></p>
-<p>从上图中可以大概看出，虚拟机运行于<code>Hypervisor</code>之上，每个虚拟机中单独运行着一个<code>Guest OS</code>。容器技术中，没有<code>Hypervisor</code>这一层，则容器和主机间共享硬件资源及操作系统。容器技术中，系统环境的隔离来自于<code>Namespaces</code>，环境资源的隔离来自于<code>Cgroups</code>，这些在后面文章会有涉及。</p>
-<h2 id="Docker一些基本概念"><a href="#Docker一些基本概念" class="headerlink" title="Docker一些基本概念"></a>Docker一些基本概念</h2><h3 id="镜像、容器"><a href="#镜像、容器" class="headerlink" title="镜像、容器"></a>镜像、容器</h3><p>镜像(<code>image</code>)是文件系统层和一些元数据的集合。我们可以将镜像和容器类比于编程语言中的类和实例的关系，虽然这种类比并不是十分准确，但是这样有助于初步理解这两者之间的关系。</p>
-<p>镜像（<code>image</code>）提供了容器运行的初始环境，类似于一个模板，实际运行的容器是以此模板派生出的实例，每个实例的属性不尽相同。可想而知，实例中对于属性的操作，不会对类本身产生变化，这也符合<code>Docker</code>的写时复制（<code>copy-on-write</code>）的机制。即容器的文件变更不会对基础镜像产生影响。</p>
-<p>前文中提到，镜像是文件系统层和元数据的集合。文件系统层没有特殊的含义，就是我们常说的文件系统。简单的理解就是一些可执行文件的集合（<em>这里的表述并不准确，但是这个概念不是我们要讨论的重点</em>）。元数据在这里表述的意义通常包括环境变量、端口映射、卷及其他细节内容，后面的文章会详细进行讨论。</p>
-<h3 id="Registry"><a href="#Registry" class="headerlink" title="Registry"></a>Registry</h3><p>Docker Registry提供了镜像的存储、分发等服务，一个Registry中可以包含多个仓库（<code>Respository</code>）；每个仓库可以包含多个标签（<code>Tag</code>）;每个标签对应一个镜像（每个镜像可以对应多个标签）。</p>
-<p>Registry分为公有Registry和私有Registry：</p>
+<p>在使用唯一标识符这种方法的时候，可以在响应中重复特定请求的唯一标识符或请求ID，这样，攻击者需要构造正确的ID才能进行攻击。使用第二种方法，python可以使用<code>==</code>来比较元组，也可以使用<code>connect()</code>来阻止其他地址向客户端发送数据包。</p>
+<h2 id="不可靠性、阻塞和超时"><a href="#不可靠性、阻塞和超时" class="headerlink" title="不可靠性、阻塞和超时"></a>不可靠性、阻塞和超时</h2><p>使用同一台机器运行服务端和客户端时，数据包实质上是不可能丢失的，这与实际的UDP协议是有出入的。实际上，使用UDP协议，客户端需要面对随机可能的服务端丢包现象。</p>
+<p>首先，UDP的不可靠性意味着客户端必须在一个循环内发送请求。对于这个请求的响应，客户端可以选择永远等待，也可以通过设置等待时长，在超时之后重新发送一个请求。虽然设置等待时长的这种方式在某种程度上会浪费一些服务器的时间（如第一个请求即将传至客户端，而第二个请求导致服务器做一些不必要的重复操作）。但是，客户端仍然需要在设定的等待周期重新发送请求，否则客户端会一直等待下去。如果一个调用等待网络操作完成，那么可以说这个调用阻塞(block)了调用方。前面描述的客户端一直等待服务端的响应，这个过程就存在着阻塞。</p>
+<h2 id="连接套接字"><a href="#连接套接字" class="headerlink" title="连接套接字"></a>连接套接字</h2><p>关于绑定，前面提到我们可以使用显式的<code>bind()</code>和隐式的方法。显式的<code>bind()</code>调用发生在服务端，用来指定服务器要使用的IP地址和端口；隐式绑定发生在客户端，操作系统随机分配一个临时端口。当然，套接字操作<code>connect()</code>也可以进行绑定操作。区别在于，如果使用<code>sendto()</code>，那么每次向服务器发送信息时，都必须显式的给出服务器的IP地址和端口：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sock = socket.scoket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line">sock.sendto(data, address)</span><br></pre></td></tr></table></figure>
+<p>如果使用<code>connect()</code>调用，则可以直接调用<code>send()</code>方法，而无需每次发送数据都重复给出服务器地址。并且，在使用<code>connect()</code>之后，前面提到的客户端混杂性问题也会得到解决，一旦配置了<code>connect()</code>，那么操作系统在发现传入数据包的返回地址与已连接的地址不同，就会将该数据包丢弃：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># client</span></span><br><span class="line">sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line">sock.connect((hostname, port))</span><br></pre></td></tr></table></figure>
+<p>由此可知，如果我们需要编写对响应数据包返回地址进行校验的UDP客户端，可以使用两种方法：</p>
 <ul>
-<li>Registry公开服务是提供给用户、允许用户管理镜像的Registry服务。一般来说，这类公开服务允许用户上传、下载公开的镜像，也有可能包含付费的私有功能。<code>Docker</code>官方的<code>Docker Hub</code>是最常使用的Registry服务，其他的还有像<code>CoreOS</code>提供的<code>Quay.io</code>，<code>Google</code>的<code>Google Containers Registry</code>等。国内的一些云厂商也提供类似于<code>Docker Hub</code>的公开服务及<code>Docker Hub</code>的镜像服务器（加速器）；</li>
-<li>除了使用公开服务，用户也可以使用<code>Docker</code>提供的<code>Docker Registry</code>镜像在本地部署自己的私有<code>Registry</code>服务，后续的文章会对这部分内容做出介绍。</li>
+<li>使用<code>sendto()</code>指定每个数据包的目标地址，然后使用<code>recvfrom()</code>接收响应，并检查响应数据包的返回地址；</li>
 </ul>
-<p>以上内容，仅仅是对容器、Docker做出了一个简单的介绍，关于Docker使用的详细介绍，会陆续的进行更新。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line">text = <span class="string">"The time is &#123;&#125;"</span>.format(datetime.now())</span><br><span class="line">data = text.encode(<span class="string">"ascii"</span>)</span><br><span class="line">sock.sendto(data, (<span class="string">"127.0.0.1"</span>, port))</span><br><span class="line">print(<span class="string">"The OS assigned me the address &#123;&#125;"</span>.format(sock.getsockname()))</span><br><span class="line">data, address = sock.recvfrom(MAX_BYTES)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在创建套接字以后使用<code>connect()</code>将其与目标地址连接，然后使用<code>send()</code>和<code>recv()</code>进行通信，操作系统将不需要的数据包过滤掉。这种做法值支持同时与一台服务器交互的情况，因为同一套接字重复运行<code>connect()</code>会将之前的地址覆盖掉。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sock.connect((hostname, port))</span><br><span class="line">sock.send(data)</span><br></pre></td></tr></table></figure>
+<p>关于<code>connect()</code>调用，需要明确两点：</p>
+<ul>
+<li>使用<code>connect()</code>连接UDP套接字，只是简单的将连接的地址写入操作系统内存，方便<code>send()</code>和<code>recv()</code>方法调用；</li>
+<li>使用<code>connect()</code>并不能够确保安全，攻击者可以伪造出拥有服务器返回地址的数据包，这种使用另一台计算机的返回地址发送数据包的行为叫做<code>电子欺诈（spoofing）</code>。</li>
+</ul>
+<h2 id="请求ID"><a href="#请求ID" class="headerlink" title="请求ID"></a>请求ID</h2><p>请求ID存在的意义在于，将请求与响应对应起来。这样可以解决客户端重复发送请求造成的重复问题以及网络结构的冗余造成的重复问题。同样，请求ID的建立，就如之前提到的那样，可以在攻击者无法获取我们的数据包时对电子欺诈起到一定的震慑作用。</p>
+<p>请求ID的构造可以在发送每个请求的时候添加一个序列号，在服务端接收到请求后，只需要将序列号复制到响应中即可。使用这种方式，就可以实现一个简单的请求ID过程。</p>
 
       
     </div>
@@ -413,7 +419,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/docker/" rel="tag"># docker</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -426,8 +432,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/07/回归-介绍和数据/" rel="next" title="回归--介绍和数据">
-                <i class="fa fa-chevron-left"></i> 回归--介绍和数据
+              <a href="/2018/12/31/python网络编程-UDP/" rel="next" title="python网络编程----UDP">
+                <i class="fa fa-chevron-left"></i> python网络编程----UDP
               </a>
             
           </div>
@@ -435,10 +441,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/31/python网络编程-UDP/" rel="prev" title="python网络编程----UDP">
-                python网络编程----UDP <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -580,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker简介"><span class="nav-number">1.</span> <span class="nav-text">Docker简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#容器VS虚拟机"><span class="nav-number">1.1.</span> <span class="nav-text">容器VS虚拟机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker一些基本概念"><span class="nav-number">2.</span> <span class="nav-text">Docker一些基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#镜像、容器"><span class="nav-number">2.1.</span> <span class="nav-text">镜像、容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Registry"><span class="nav-number">2.2.</span> <span class="nav-text">Registry</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#混杂客户端和垃圾回复"><span class="nav-number">1.</span> <span class="nav-text">混杂客户端和垃圾回复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不可靠性、阻塞和超时"><span class="nav-number">2.</span> <span class="nav-text">不可靠性、阻塞和超时</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接套接字"><span class="nav-number">3.</span> <span class="nav-text">连接套接字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求ID"><span class="nav-number">4.</span> <span class="nav-text">请求ID</span></a></li></ol></div>
             
 
           </div>
@@ -750,9 +752,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/12/23/start-docker-docker初探/';
-          this.page.identifier = '2018/12/23/start-docker-docker初探/';
-          this.page.title = 'start-docker--docker初探';
+          this.page.url = 'http://yoursite.com/2018/12/31/python网络编程-UDP（2）/';
+          this.page.identifier = '2018/12/31/python网络编程-UDP（2）/';
+          this.page.title = 'python网络编程----UDP（2）';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://lineway.disqus.com/embed.js';
