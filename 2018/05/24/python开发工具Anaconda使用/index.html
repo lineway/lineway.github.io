@@ -140,7 +140,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -150,7 +150,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -270,20 +270,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/python开发工具Anaconda使用/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yiming.zhang">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="SnowEnv">
     </span>
 
@@ -326,7 +326,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/编程学习/" itemprop="url" rel="index">
                     <span itemprop="name">编程学习</span>
                   </a>
@@ -376,7 +376,7 @@
       
         <h2 id="Anaconda简介"><a href="#Anaconda简介" class="headerlink" title="Anaconda简介"></a>Anaconda简介</h2><p><code>Anaconda</code>是一套集成的python开发环境，据说是为了方便实用python做科学计算而做出的集成环境，但是由于其涵盖了大多数的主流第三方库，以及集成了<code>conda</code>工具，因此越来越多的python开发者选择使用<code>Anaconda</code>来替代原始python环境。</p>
 <h2 id="Anaconda简单使用"><a href="#Anaconda简单使用" class="headerlink" title="Anaconda简单使用"></a>Anaconda简单使用</h2><p><code>Anaconda</code>可以方便的下载，官方网址是：<a href="https://anaconda.org/" target="_blank" rel="noopener">https://anaconda.org/</a>,如果不方便在官网进行下载的话，国内也推荐使用清华大学的开源镜像站点进行下载，链接地址：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a>，按照自己操作系统的类别和需要安装的版本进行选择即可，关于安装部分就不详细介绍。  </p>
-<p>安装完成后，打开终端，输入<code>python</code>，如果出现一下图片，则证明安装成功并且环境信息配置正常：<br><img src="/images/anaconda_1.jpg" alt="">  </p>
+<p>安装完成后，打开终端，输入<code>python</code>，如果出现一下图片，则证明安装成功并且环境信息配置正常：<br><img src="/images/anaconda_1.jpg" alt>  </p>
 <p>python开发者通常会纠结于各种开发环境的配置问题，因此会选择例如<code>virtualenv</code>、<code>pyenv</code>等第三方库来管理不同的开发环境，当我们使用<code>Anaconda</code>之后，其自带的<code>conda</code>也可以帮助我们有效的管理各种开发环境的配置，比如以下的几种操作：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">conda info -e			<span class="comment"># 查看host中所有的python开发环境</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建新的虚拟环境</span></span><br><span class="line">conda create -n &lt;env_name&gt; &lt;python_version&gt; &lt;python_lib&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 激活要使用的环境</span></span><br><span class="line">source activate &lt;env_name&gt; <span class="comment"># linux</span></span><br><span class="line">activate &lt;env_name&gt;        <span class="comment"># windows</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 退出环境</span></span><br><span class="line">source deactivate			<span class="comment"># linux</span></span><br><span class="line">deactivate					<span class="comment"># windows</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除host中不需要的环境</span></span><br><span class="line">conda remove -n &lt;env_name&gt; --all</span><br></pre></td></tr></table></figure>
 <p>python有一个方便的包管理工具<code>pip</code>,当我们使用<code>conda</code>之后，也可以用<code>conda</code>来替代<code>pip</code>，使用方法基本类似，就不做过多的介绍了。根据个人喜好的不同，大家可以自由选择，另外，如果因为网络问题造成的<code>pip</code>或者<code>conda</code>安装第三方库缓慢，可以在上述清华大学的开源镜像网站中配置清华大学的源。</p>
@@ -496,7 +496,7 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">yiming.zhang</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -509,7 +509,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

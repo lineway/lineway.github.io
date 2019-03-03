@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="redis,">
+  <meta name="keywords" content="python,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="redis中的数据结构redis中可以存储键与5种不同的数据结构，这5中数据结构分别是：    STRING(字符串) LIST(列表) SET(集合) HASH(散列 ZSET(有序集合)  redis中的字符串redis中的存储都是k-v形式的，存储字符串(STRING)类型的值，也需要设置一个键名。对于redis中的字符串的操作，后续会有更详细的说明。简单的字符串操作如下： 123set h">
-<meta name="keywords" content="redis">
+<meta name="description" content="混杂客户端和垃圾回复上一篇 UDP简介介绍了一个简单的 UDP服务端和客户端实现，这是一个简单的实现，这种方式实现的客户端程序是十分危险的。尽管recvfrom()返回了传入的数据报地址，但是代码没有检查该数据报的源地址，即客户端没有检查该数据报是否由客户端发出。 假设现在有一个攻击者，在服务端返回数据报之前将伪造的数据报发送给该客户端，那么客户端就会认为伪造的数据报来源于真是的服务端。像这样不考">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redis数据结构简介">
-<meta property="og:url" content="http://yoursite.com/2018/03/22/redis数据结构简介/index.html">
+<meta property="og:title" content="python网络编程----UDP（2）">
+<meta property="og:url" content="http://yoursite.com/2018/12/31/python网络编程-UDP（续）/index.html">
 <meta property="og:site_name" content="SnowEnv">
-<meta property="og:description" content="redis中的数据结构redis中可以存储键与5种不同的数据结构，这5中数据结构分别是：    STRING(字符串) LIST(列表) SET(集合) HASH(散列 ZSET(有序集合)  redis中的字符串redis中的存储都是k-v形式的，存储字符串(STRING)类型的值，也需要设置一个键名。对于redis中的字符串的操作，后续会有更详细的说明。简单的字符串操作如下： 123set h">
+<meta property="og:description" content="混杂客户端和垃圾回复上一篇 UDP简介介绍了一个简单的 UDP服务端和客户端实现，这是一个简单的实现，这种方式实现的客户端程序是十分危险的。尽管recvfrom()返回了传入的数据报地址，但是代码没有检查该数据报的源地址，即客户端没有检查该数据报是否由客户端发出。 假设现在有一个攻击者，在服务端返回数据报之前将伪造的数据报发送给该客户端，那么客户端就会认为伪造的数据报来源于真是的服务端。像这样不考">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-22T09:37:23.676Z">
+<meta property="og:updated_time" content="2019-01-06T14:08:57.230Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="redis数据结构简介">
-<meta name="twitter:description" content="redis中的数据结构redis中可以存储键与5种不同的数据结构，这5中数据结构分别是：    STRING(字符串) LIST(列表) SET(集合) HASH(散列 ZSET(有序集合)  redis中的字符串redis中的存储都是k-v形式的，存储字符串(STRING)类型的值，也需要设置一个键名。对于redis中的字符串的操作，后续会有更详细的说明。简单的字符串操作如下： 123set h">
+<meta name="twitter:title" content="python网络编程----UDP（2）">
+<meta name="twitter:description" content="混杂客户端和垃圾回复上一篇 UDP简介介绍了一个简单的 UDP服务端和客户端实现，这是一个简单的实现，这种方式实现的客户端程序是十分危险的。尽管recvfrom()返回了传入的数据报地址，但是代码没有检查该数据报的源地址，即客户端没有检查该数据报是否由客户端发出。 假设现在有一个攻击者，在服务端返回数据报之前将伪造的数据报发送给该客户端，那么客户端就会认为伪造的数据报来源于真是的服务端。像这样不考">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/22/redis数据结构简介/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/31/python网络编程-UDP（续）/">
 
 
 
 
 
-  <title>redis数据结构简介 | SnowEnv</title>
+  <title>python网络编程----UDP（2） | SnowEnv</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/22/redis数据结构简介/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/31/python网络编程-UDP（续）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yiming.zhang">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">redis数据结构简介</h1>
+          <h1 class="post-title" itemprop="name headline">python网络编程----UDP（2）</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T14:00:07+08:00">
-                2018-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-31T17:25:21+08:00">
+                2018-12-31
               </time>
             
 
@@ -343,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/22/redis数据结构简介/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/03/22/redis数据结构简介/" itemprop="commentCount"></span>
+                <a href="/2018/12/31/python网络编程-UDP（续）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/12/31/python网络编程-UDP（续）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -372,25 +372,36 @@
       
 
       
-        <h1 id="redis中的数据结构"><a href="#redis中的数据结构" class="headerlink" title="redis中的数据结构"></a>redis中的数据结构</h1><p>redis中可以存储键与5种不同的数据结构，这5中数据结构分别是：  </p>
+        <h2 id="混杂客户端和垃圾回复"><a href="#混杂客户端和垃圾回复" class="headerlink" title="混杂客户端和垃圾回复"></a>混杂客户端和垃圾回复</h2><p>上一篇 <a href="https://lineway.github.io/2018/12/31/python%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-UDP/" target="_blank" rel="noopener">UDP简介</a>介绍了一个简单的 UDP服务端和客户端实现，这是一个简单的实现，这种方式实现的客户端程序是十分危险的。尽管<code>recvfrom()</code>返回了传入的数据报地址，但是代码没有检查该数据报的源地址，即客户端没有检查该数据报是否由客户端发出。</p>
+<p>假设现在有一个攻击者，在服务端返回数据报之前将伪造的数据报发送给该客户端，那么客户端就会认为伪造的数据报来源于真是的服务端。像这样不考虑地址是否正确，接收并处理所有收到的数据包的网络监听客户端在技术上叫做<code>混杂(promiscuous)客户端</code>。这种客户端有其适用的场景，但是在当前情况下，这是一个问题。</p>
+<p>一般而言，使用好的加密方法能保证程序与正确的服务器进行通信。但是也可以通过两个简单方案解决这类问题：</p>
 <ul>
-<li><code>STRING</code>(字符串)</li>
-<li><code>LIST</code>(列表)</li>
-<li><code>SET</code>(集合)</li>
-<li><code>HASH</code>(散列</li>
-<li><code>ZSET</code>(有序集合)</li>
+<li>设计或使用在请求中包含唯一标识符或请求ID的协议；</li>
+<li>检查响应数据包的地址与请求数据包的地址是否相同；</li>
 </ul>
-<h2 id="redis中的字符串"><a href="#redis中的字符串" class="headerlink" title="redis中的字符串"></a>redis中的字符串</h2><p>redis中的存储都是<code>k-v</code>形式的，存储字符串(STRING)类型的值，也需要设置一个键名。对于redis中的字符串的操作，后续会有更详细的说明。<br>简单的字符串操作如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> hello world <span class="comment"># 设置键为hello的值为world，返回OK则设置成功</span></span><br><span class="line">get hello       <span class="comment"># 获取键为hello的值，返回其值，不存在则返回nil</span></span><br><span class="line">del hello       <span class="comment"># 删除键为hello的值，成功则返回int类型的1</span></span><br></pre></td></tr></table></figure>
-<h2 id="redis中的列表"><a href="#redis中的列表" class="headerlink" title="redis中的列表"></a>redis中的列表</h2><p>redis中的列表可以有序的存储多个字符串。redis中的列表操作和很多编程语言中的列表操作相似。简单的操作如下所示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rpush list-key item    <span class="comment"># 将值item推入列表list-key的右端</span></span><br><span class="line">rpush list-key item2   <span class="comment"># 将值item2推入列表list-key的右端</span></span><br><span class="line">rpop list-key          <span class="comment"># 从列表的左端弹出一个元素，并返回被弹出的值</span></span><br><span class="line">lrange list-key 0 -1   <span class="comment"># 获取列表在给定范围上的所有值</span></span><br><span class="line">lindex list-key 1      <span class="comment"># 获取列表在给定位置上的单个元素</span></span><br></pre></td></tr></table></figure>
-<h2 id="redis的集合"><a href="#redis的集合" class="headerlink" title="redis的集合"></a>redis的集合</h2><p>redis的集合和列表都可以存储多个字符串，它们之间的区别在于：列表可以存储多个相同的字符串，而集合则通过散列值来保证自己存储的每个字符串都是各不相同的，常见的集合操作如下所示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sadd <span class="built_in">set</span>-key item     <span class="comment"># 将给定元素添加到集合</span></span><br><span class="line">smembers <span class="built_in">set</span>-key      <span class="comment"># 返回集合包含的所有元素</span></span><br><span class="line">sismembers <span class="built_in">set</span>-key item3     <span class="comment"># 检查给定元素是否存在于集合中</span></span><br><span class="line">srem <span class="built_in">set</span>-key item     <span class="comment"># 如果给定的元素存在于集合中，那么移除这个元素</span></span><br></pre></td></tr></table></figure>
-<h2 id="redis的散列"><a href="#redis的散列" class="headerlink" title="redis的散列"></a>redis的散列</h2><p>redis的散列可以存储多个键值对之间的映射。散列存储的值即可以是字符串，又可以是数字值。简单的散列操作如下所示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hset <span class="built_in">hash</span>-key sub-key1 value1   <span class="comment"># 将键值对sub-key1 value1添加到散列hash-key中</span></span><br><span class="line">hgetall <span class="built_in">hash</span>-key                <span class="comment"># 获取散列中所有的键值对</span></span><br><span class="line">hdel <span class="built_in">hash</span>-key sub-key1          <span class="comment"># 删除散列中指定键值对</span></span><br></pre></td></tr></table></figure>
-<h2 id="redis的有序集合"><a href="#redis的有序集合" class="headerlink" title="redis的有序集合"></a>redis的有序集合</h2><p>有序集合和散列一样，都是存储键值对的，有序集合的键被称为成员(member)，每个成员都是独一无二的；有序集合的值被称为分值(score)，<strong>分值必须为浮点数</strong>。<em>有序集合是redis中唯一一个即可以根据成员访问元素，又可以根据分值及分值的排列顺序来访问元素的结构</em>。<br>简单的有序集合的操作如下所示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">zadd zset-key 728 member1      <span class="comment"># 将一个带有给定分值的成员添加到有序集合里面</span></span><br><span class="line">zrange zset-key 0 -1 withscores   <span class="comment"># 根据有序元素在有序排列中所处的位置，从有序集合里面获取多个元素</span></span><br><span class="line">zrangebyscore zset-key 0 800 withscores    <span class="comment"># 获取有序集合在给定分值范围内的所有元素</span></span><br><span class="line">zrem zset-key member1        <span class="comment"># 如果给定成员存在于有序集合，那么移除这个成员</span></span><br></pre></td></tr></table></figure>
-<p>以上内容简单介绍了redis中的5中数据结构，关于redis中对于这几种数据结构的操作，后续有更详尽的介绍。</p>
+<p>在使用唯一标识符这种方法的时候，可以在响应中重复特定请求的唯一标识符或请求ID，这样，攻击者需要构造正确的ID才能进行攻击。使用第二种方法，python可以使用<code>==</code>来比较元组，也可以使用<code>connect()</code>来阻止其他地址向客户端发送数据包。</p>
+<h2 id="不可靠性、阻塞和超时"><a href="#不可靠性、阻塞和超时" class="headerlink" title="不可靠性、阻塞和超时"></a>不可靠性、阻塞和超时</h2><p>使用同一台机器运行服务端和客户端时，数据包实质上是不可能丢失的，这与实际的UDP协议是有出入的。实际上，使用UDP协议，客户端需要面对随机可能的服务端丢包现象。</p>
+<p>首先，UDP的不可靠性意味着客户端必须在一个循环内发送请求。对于这个请求的响应，客户端可以选择永远等待，也可以通过设置等待时长，在超时之后重新发送一个请求。虽然设置等待时长的这种方式在某种程度上会浪费一些服务器的时间（如第一个请求即将传至客户端，而第二个请求导致服务器做一些不必要的重复操作）。但是，客户端仍然需要在设定的等待周期重新发送请求，否则客户端会一直等待下去。如果一个调用等待网络操作完成，那么可以说这个调用阻塞(block)了调用方。前面描述的客户端一直等待服务端的响应，这个过程就存在着阻塞。</p>
+<h2 id="连接套接字"><a href="#连接套接字" class="headerlink" title="连接套接字"></a>连接套接字</h2><p>关于绑定，前面提到我们可以使用显式的<code>bind()</code>和隐式的方法。显式的<code>bind()</code>调用发生在服务端，用来指定服务器要使用的IP地址和端口；隐式绑定发生在客户端，操作系统随机分配一个临时端口。当然，套接字操作<code>connect()</code>也可以进行绑定操作。区别在于，如果使用<code>sendto()</code>，那么每次向服务器发送信息时，都必须显式的给出服务器的IP地址和端口：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sock = socket.scoket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line">sock.sendto(data, address)</span><br></pre></td></tr></table></figure>
+<p>如果使用<code>connect()</code>调用，则可以直接调用<code>send()</code>方法，而无需每次发送数据都重复给出服务器地址。并且，在使用<code>connect()</code>之后，前面提到的客户端混杂性问题也会得到解决，一旦配置了<code>connect()</code>，那么操作系统在发现传入数据包的返回地址与已连接的地址不同，就会将该数据包丢弃：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># client</span></span><br><span class="line">sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line">sock.connect((hostname, port))</span><br></pre></td></tr></table></figure>
+<p>由此可知，如果我们需要编写对响应数据包返回地址进行校验的UDP客户端，可以使用两种方法：</p>
+<ul>
+<li>使用<code>sendto()</code>指定每个数据包的目标地址，然后使用<code>recvfrom()</code>接收响应，并检查响应数据包的返回地址；</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line">text = <span class="string">"The time is &#123;&#125;"</span>.format(datetime.now())</span><br><span class="line">data = text.encode(<span class="string">"ascii"</span>)</span><br><span class="line">sock.sendto(data, (<span class="string">"127.0.0.1"</span>, port))</span><br><span class="line">print(<span class="string">"The OS assigned me the address &#123;&#125;"</span>.format(sock.getsockname()))</span><br><span class="line">data, address = sock.recvfrom(MAX_BYTES)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在创建套接字以后使用<code>connect()</code>将其与目标地址连接，然后使用<code>send()</code>和<code>recv()</code>进行通信，操作系统将不需要的数据包过滤掉。这种做法值支持同时与一台服务器交互的情况，因为同一套接字重复运行<code>connect()</code>会将之前的地址覆盖掉。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sock.connect((hostname, port))</span><br><span class="line">sock.send(data)</span><br></pre></td></tr></table></figure>
+<p>关于<code>connect()</code>调用，需要明确两点：</p>
+<ul>
+<li>使用<code>connect()</code>连接UDP套接字，只是简单的将连接的地址写入操作系统内存，方便<code>send()</code>和<code>recv()</code>方法调用；</li>
+<li>使用<code>connect()</code>并不能够确保安全，攻击者可以伪造出拥有服务器返回地址的数据包，这种使用另一台计算机的返回地址发送数据包的行为叫做<code>电子欺诈（spoofing）</code>。</li>
+</ul>
+<h2 id="请求ID"><a href="#请求ID" class="headerlink" title="请求ID"></a>请求ID</h2><p>请求ID存在的意义在于，将请求与响应对应起来。这样可以解决客户端重复发送请求造成的重复问题以及网络结构的冗余造成的重复问题。同样，请求ID的建立，就如之前提到的那样，可以在攻击者无法获取我们的数据包时对电子欺诈起到一定的震慑作用。</p>
+<p>请求ID的构造可以在发送每个请求的时候添加一个序列号，在服务端接收到请求后，只需要将序列号复制到响应中即可。使用这种方式，就可以实现一个简单的请求ID过程。</p>
 
       
     </div>
@@ -408,7 +419,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/redis/" rel="tag"># redis</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -421,8 +432,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/19/python-opencv环境安装/" rel="next" title="python-opencv环境安装">
-                <i class="fa fa-chevron-left"></i> python-opencv环境安装
+              <a href="/2018/12/31/python网络编程-UDP/" rel="next" title="python网络编程----UDP">
+                <i class="fa fa-chevron-left"></i> python网络编程----UDP
               </a>
             
           </div>
@@ -431,8 +442,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/23/python闭包/" rel="prev" title="python闭包">
-                python闭包 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/31/python网络编程-UDP（2）/" rel="prev" title="python网络编程----UDP（2）">
+                python网络编程----UDP（2） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -575,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#redis中的数据结构"><span class="nav-number">1.</span> <span class="nav-text">redis中的数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#redis中的字符串"><span class="nav-number">1.1.</span> <span class="nav-text">redis中的字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis中的列表"><span class="nav-number">1.2.</span> <span class="nav-text">redis中的列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis的集合"><span class="nav-number">1.3.</span> <span class="nav-text">redis的集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis的散列"><span class="nav-number">1.4.</span> <span class="nav-text">redis的散列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis的有序集合"><span class="nav-number">1.5.</span> <span class="nav-text">redis的有序集合</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#混杂客户端和垃圾回复"><span class="nav-number">1.</span> <span class="nav-text">混杂客户端和垃圾回复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不可靠性、阻塞和超时"><span class="nav-number">2.</span> <span class="nav-text">不可靠性、阻塞和超时</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接套接字"><span class="nav-number">3.</span> <span class="nav-text">连接套接字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求ID"><span class="nav-number">4.</span> <span class="nav-text">请求ID</span></a></li></ol></div>
             
 
           </div>
@@ -745,9 +756,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/03/22/redis数据结构简介/';
-          this.page.identifier = '2018/03/22/redis数据结构简介/';
-          this.page.title = 'redis数据结构简介';
+          this.page.url = 'http://yoursite.com/2018/12/31/python网络编程-UDP（续）/';
+          this.page.identifier = '2018/12/31/python网络编程-UDP（续）/';
+          this.page.title = 'python网络编程----UDP（2）';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://lineway.disqus.com/embed.js';
